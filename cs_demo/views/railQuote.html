@@ -1,0 +1,44 @@
+
+<div class="container">
+	<div id='railQuote'>
+
+
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+		<li ng-class = '{active: bodyCtrl.activeTab == "step1"}'>
+			<a ng-click = 'bodyCtrl.activeTab = "step1"'>Step 1</a>
+		</li>
+
+		<li ng-class = '{active: bodyCtrl.activeTab == "step2"}'>
+			<a ng-click = 'bodyCtrl.activeTab = "step2"'>Step 2</a>
+		</li>
+
+		<li ng-class = '{active: bodyCtrl.activeTab == "step3"}'>
+			<a ng-click = 'bodyCtrl.activeTab = "step3"'>Step 3</a>
+		</li>
+
+	</ul>
+</div>
+
+<div class="tab-content">
+	<div ng-switch = 'bodyCtrl.activeTab'>
+		<div ng-switch-when = 'step1'>
+			<p ng-include = '"views/rq_tab1.html"'></p>
+		</div>
+	</div>
+	<div ng-switch = 'bodyCtrl.activeTab'>
+		<div ng-switch-when = 'step2'>
+			<p ng-include = '"views/rq_tab2.html"'></p>
+		</div>
+	</div>
+	<div ng-switch = 'bodyCtrl.activeTab'>
+		<div ng-switch-when = 'step3'>
+			<p ng-include = '"views/rq_tab3.html"'></p>
+		</div>
+	</div>
+
+</div>
+
+
+	</div>
+</div>

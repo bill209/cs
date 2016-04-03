@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>cs_demo</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/flip.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<!-- appName -->
+<body ng-app="cs_demo" ng-controller='BodyCtrl as bodyCtrl' ng-style='bodyCtrl.bodyBgColor'>
+	<div class='container'>
+
+
+		<!-- navbar - bootstrap -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header" ng-class="{ hiliteNav: bodyCtrl.isAbout() }" >
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a ng-class="{ active: bodyCtrl.isActive('/')}" class="navbar-brand" href="#/">Home</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li ng-class="{ active: bodyCtrl.isActive('/about')}"><a href="#/about">About</a></li>
+
+						<li ng-class="{ active: bodyCtrl.isActive('/railQuote')}"><a ng-class="{ hiliteNav: bodyCtrl.isAbout() }" href="#/railQuote">Rail Quote</a></li>
+						<li ng-class="{ active: bodyCtrl.isActive('/restCalls')}"><a ng-class="{ hiliteNav: bodyCtrl.isAbout() }" href="#/restCalls">Rest Calls</a></li>
+
+
+						<li ng-class="{ active: bodyCtrl.isActive('/test')}"><a ng-class="{ hiliteNav: bodyCtrl.isAbout() }" href="#/test">Test</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<!-- end navbar -->
+
+		<div ng-view></div>
+
+		<div id='footer' class="footer">
+			<p>© Company 2015</p>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><!-- required for bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script src='js/main.js'></script>
+
+	<script src='js/directives/showTab.js'></script>
+	<script src='js/directives/clock.js'></script>
+	<script src='js/directives/myCustomer.js'></script>
+
+
+	<script src='js/directives/toggleClass.js'></script>
+
+
+	<script src='js/filters.js'></script>
+
+
+	<script src='js/svc.js'></script>
+
+	<script src='js/controllers.js'></script>
+
+</body>
+</html>

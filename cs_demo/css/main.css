@@ -1,0 +1,102 @@
+html, body { height: 100%; }
+body {
+	color: #333;
+}
+.footnotes {
+	padding: 5px 19px;
+}
+#footer {
+	background-color: #f5f5f5;
+	padding: 40px 20px 20px 20px;
+	color: #ddd;
+}
+/* --------------------------- cs section --------------------------- */
+
+#railQuote form {
+	margin-top: 30px;
+}
+
+/* --------------------------- routing/nav  section --------------------------- */
+
+/* this lightens the nav items on the dark background of the about page */
+ul.navbar-right li a.hiliteNav:hover {
+	color: #ddd;
+}
+div.navbar-header.hiliteNav {
+  position: relative;
+  z-index: 9;
+}
+.nav li {
+	z-index: 20;
+}
+.nav li a{
+	color: #ddd;
+}
+
+/* --------------------------- about page --------------------------- */
+#about {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 600px;
+	text-align: center;
+	background-color: #333;
+}
+#about h1 {
+	vertical-align: middle;
+	line-height: 600px;
+	color: #fff;
+}
+#readme h4 {
+	cursor: pointer;
+}
+.readmeContent p {
+	font-size: 15px;
+}
+.footnotes p {
+	margin-top: 10px;
+}
+.readmeContent, .footnotes {
+	height: 100%;
+	max-height: 0;
+	overflow: auto;
+	 -webkit-transition: height 1s ease-out;
+	 -moz-transition: height 1s ease-out;
+	 -o-transition: height 1s ease-out;
+	 transition: max-height 1s ease-out;
+}
+.readmeContent_show{
+	 max-height: 500px;
+}
+
+
+/* --------------------------- rest calls --------------------------- */
+.rest_results{
+	padding: 10px;
+	text-shadow: 0 1px 0 #fff;
+	background-color: #ddd;
+	height: 300px;
+}
+.rest_results i{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.big_number {
+	font-size: 160px;
+	text-align: center;
+	color: #888;
+}
+
+
+
+/* --------------------------- data binding --------------------------- */
+#heroes {
+	padding-top: 20px;
+}
+#heroes li span {
+	display: inline-block;
+	width: 150px;
+}
+
