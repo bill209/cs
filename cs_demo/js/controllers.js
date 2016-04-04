@@ -10,17 +10,21 @@
 		.module('cs_demo')
 		.constant('QUOTE',{ 'quote': 'The only thing that is constant is change.', 'author': 'Heraclitus'});
 
-
-
 	function bodyCtrl ($scope, $location){
 		var vm = this;
-		vm.activeTab = 'step1';
+		vm.activeTab = 'step3';
+		vm.subjects = ['Math', 'Physics', 'Chemistry', 'Hindi', 'English'];
+		
 		vm.bodyBgColor={'background-color':'#ffffff'}
 		vm.isActive = isActive;
 		vm.isAbout = isAbout;
 		vm.isTabs = isTabs;
+		vm.dropboxitemselected = dropboxitemselected;
 		// nav bar functions
 		// adds the active class to the chosen nav item
+		function dropboxitemselected(a){
+			console.log('selected item: ',a);
+		}
 		function isActive(viewLocation) {
 				return viewLocation === $location.path();
 		};
